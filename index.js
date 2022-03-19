@@ -4,7 +4,7 @@
 var qs = require('qs')
 
 function decode (uri, urnScheme) {
-  urnScheme = urnScheme || 'veles'
+  urnScheme = urnScheme || 'butk'
   if (uri.indexOf(urnScheme) !== 0 ||
     uri.charAt(urnScheme.length) !== ':'
   ) throw new Error('Invalid BIP21 URI: ' + uri)
@@ -25,7 +25,7 @@ function decode (uri, urnScheme) {
 
 function encode (address, options, urnScheme) {
   options = options || {}
-  var scheme = urnScheme || 'veles'
+  var scheme = urnScheme || 'butk'
   var query = qs.stringify(options)
 
   if (options.amount) {
